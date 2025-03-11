@@ -1,6 +1,5 @@
 package com.sieracode.gui.componet;
 
-
 import com.sieracode.controller.UserController;
 import com.sieracode.util.Button;
 import com.sieracode.util.MyPasswordField;
@@ -24,9 +23,8 @@ import net.miginfocom.swing.MigLayout;
  * Es utilizado en la ventana de inicio de sesión para proporcionar un diseño
  * visual atractivo y funcionalidad interactiva.
  */
-
 public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
-    
+
     private UserController userController;
 
     public PanelLoginAndRegister() {
@@ -66,15 +64,17 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(205, 250, 250));
         cmd.setText("SING UP");
-          cmd.addActionListener(e -> {
+        cmd.addActionListener(e -> {
             String username = txtUser.getText();
             long telefono = Long.parseLong(txtMail.getText());
             String password = new String(txtPass.getPassword());
             boolean result = userController.register(username, telefono, password);  // Llama al controlador para registrar
             if (result) {
                 System.out.println("Registro exitoso");
+                 userController.clearFields(this); 
             } else {
                 System.out.println("Error al registrar usuario");
+                 userController.clearFields(this); 
             }
         });
         register.add(cmd, "w 40%, h 40");
@@ -108,26 +108,28 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(205, 250, 250));
         cmd.setText("SING IN");
-        
+
         cmd.addActionListener(e -> {
             String username = txtUser.getText();
             String password = new String(txtPass.getPassword());
             boolean result = userController.login(username, password);  // Llama al controlador para hacer login
             if (result) {
                 System.out.println("Login exitoso");
+                  userController.clearFields(this); 
             } else {
                 System.out.println("Error al iniciar sesión");
+                 userController.clearFields(this); 
             }
         });
         login.add(cmd, "w 40%, h 40");
     }
-    
-     /**
+
+    /**
      * Método para alternar entre las interfaces de Login y Register.
      *
-     * @param show Si es true, muestra la interfaz de Login. Si es false, muestra la interfaz de Register.
+     * @param show Si es true, muestra la interfaz de Login. Si es false,
+     * muestra la interfaz de Register.
      */
-    
     public void showLogin(boolean show) {
         if (show) {
             register.setVisible(true);
@@ -137,26 +139,24 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
             login.setVisible(true);
         }
     }
-    
-    private void registerUser(String username, String email, String password) {
-        // Aquí va la lógica para registrar al usuario.
-        // Normalmente, llamarías a un servicio de backend para registrar al usuario.
-        System.out.println("Registrando usuario: " + username);
-        System.out.println("Email: " + email);
-        System.out.println("Password: " + password);
 
-        // Luego podrías hacer algo como redirigir a la pantalla de login, por ejemplo:
-        // showLogin(true);
-    }
+    public void clearFields() {
+        // Limpiar los campos de texto
+        for (java.awt.Component comp : register.getComponents()) {
+            if (comp instanceof MyTextField myTextField) {
+                myTextField.setText("");
+            } else if (comp instanceof MyPasswordField myPasswordField) {
+                myPasswordField.setText("");
+            }
+        }
 
-    private void loginUser(String username, String password) {
-        // Aquí va la lógica para iniciar sesión.
-        // Verifica las credenciales del usuario (por ejemplo, consultando una base de datos).
-        System.out.println("Iniciando sesión con el usuario: " + username);
-        System.out.println("Password: " + password);
-
-        // Si la autenticación es exitosa, podrías redirigir a una pantalla principal, por ejemplo:
-        // navigateToHomePage();
+        for (java.awt.Component comp : login.getComponents()) {
+            if (comp instanceof MyTextField myTextField) {
+                myTextField.setText("");
+            } else if (comp instanceof MyPasswordField myPasswordField) {
+                myPasswordField.setText("");
+            }
+        }
     }
 
     @SuppressWarnings("unchecked")

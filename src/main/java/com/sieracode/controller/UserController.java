@@ -1,5 +1,6 @@
 package com.sieracode.controller;
 
+import com.sieracode.gui.componet.PanelLoginAndRegister;
 import com.sieracode.service.UserService;
 
 public class UserController {
@@ -19,4 +20,8 @@ public class UserController {
     public boolean register(String username, long telefono, String password) {
         return userService.register(username, telefono, password);  // Llama al servicio de registro
     }
+    
+    public void clearFields(PanelLoginAndRegister panel) {
+    panel.clearFields();  // Llama al método que limpia los campos de la vista
+}
 }

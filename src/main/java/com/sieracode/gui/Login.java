@@ -114,12 +114,9 @@ public class Login extends javax.swing.JFrame {
         background.add(loginAndR, "width " + loginSize + "%, pos 1al 0 n 100%");
 
         // Añade un evento al panel de portada para iniciar la animación al hacer clic
-        cover.addEvent(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!animator.isRunning()) {
-                    animator.start();
-                }
+        cover.addEvent((ActionEvent e) -> {
+            if (!animator.isRunning()) {
+                animator.start();
             }
         });
     }
@@ -189,10 +186,8 @@ public class Login extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Login().setVisible(true);
         });
     }
 
