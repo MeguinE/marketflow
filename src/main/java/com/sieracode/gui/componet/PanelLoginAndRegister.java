@@ -25,7 +25,7 @@ import net.miginfocom.swing.MigLayout;
  */
 public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
-    private UserController userController;
+    private final UserController userController;
 
     public PanelLoginAndRegister() {
         initComponents();
@@ -52,7 +52,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
         MyTextField txtMail = new MyTextField();
         txtMail.setPrefixIcon(new ImageIcon(getClass().getResource("/recurso/icon/mail.png")));
-        txtMail.setHint("Email");
+        txtMail.setHint("phone");
         register.add(txtMail, "w 60%");
 
         MyPasswordField txtPass = new MyPasswordField();
@@ -71,6 +71,9 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
             boolean result = userController.register(username, telefono, password);  // Llama al controlador para registrar
             if (result) {
                 System.out.println("Registro exitoso");
+                //llama ventana de seguridad 
+                //ingresa administrador contraseña 
+                //registro exitoso
                  userController.clearFields(this); 
             } else {
                 System.out.println("Error al registrar usuario");
@@ -116,6 +119,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
             if (result) {
                 System.out.println("Login exitoso");
                   userController.clearFields(this); 
+                  //cierra la ventana y abre el dashbord
             } else {
                 System.out.println("Error al iniciar sesión");
                  userController.clearFields(this); 

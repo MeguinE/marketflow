@@ -1,14 +1,11 @@
--- Crear la base de datos marketflow si no existe
-CREATE DATABASE IF NOT EXISTS marketflow;
-
--- Usar la base de datos marketflow
+-- Cambiar a la base de datos marketflow
 USE marketflow;
 
 -- Crear la tabla user
 CREATE TABLE IF NOT EXISTS user (
     id_user INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
-    telefono INT(15),
+    telefono INT,
     password_hash VARCHAR(255)
 );
 

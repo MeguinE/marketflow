@@ -3,7 +3,6 @@ package com.sieracode.gui;
 import com.sieracode.gui.componet.PanelCover;
 import com.sieracode.gui.componet.PanelLoginAndRegister;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;

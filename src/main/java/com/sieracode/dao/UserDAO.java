@@ -5,7 +5,7 @@ import com.sieracode.model.User;
 import java.sql.*;
 
 public class UserDAO {
-    private Connection connection;
+    private final Connection connection;
 
     public UserDAO() {
         // Aquí obtienes la conexión correcta desde DatabaseConnection
@@ -28,7 +28,6 @@ public class UserDAO {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
         }
         return null;  // Si no se encuentra el usuario
     }
@@ -43,7 +42,6 @@ public class UserDAO {
             int rowsAffected = stmt.executeUpdate();
             return rowsAffected > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
         }
         return false;
     }

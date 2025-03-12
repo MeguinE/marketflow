@@ -5,7 +5,7 @@ import com.sieracode.service.UserService;
 
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserController() {
         userService = new UserService();  // Llama al servicio para manejar la lógica de negocio
