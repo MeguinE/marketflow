@@ -66,9 +66,13 @@ mvn exec:java
 2. **Login y Registro**: 
    - La aplicación muestra un panel de login/registro donde los usuarios pueden registrarse o iniciar sesión.
    - Los usuarios registrados podrán ser autenticados utilizando el nombre de usuario y la contraseña.
+ ![Captura de pantalla 2025-03-12 101903](https://github.com/user-attachments/assets/a9e8b1e8-bdcc-4b29-bfc8-362a1be1d3bc)
+![Captura de pantalla 2025-03-12 101850](https://github.com/user-attachments/assets/ae360e01-a875-4b04-a38a-00d45cf46aa8)
+
 
 3. **Interfaz**: 
    - El sistema utiliza una interfaz moderna y animada para la transición entre el registro y el login, mejorando la experiencia de usuario.
+   - 
 
 ## Pruebas
 
