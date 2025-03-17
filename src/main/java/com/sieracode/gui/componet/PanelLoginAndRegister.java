@@ -1,7 +1,8 @@
 package com.sieracode.gui.componet;
 
 import com.sieracode.controller.UserController;
-import com.sieracode.util.Button;
+import com.sieracode.gui.Dashboard;
+import com.sieracode.util.EffectButton;
 import com.sieracode.util.MyPasswordField;
 import com.sieracode.util.MyTextField;
 import java.awt.Color;
@@ -37,7 +38,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
     }
 
     private void initRegister() {
-        register.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]25[]push"));
+        register.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]10[]10[]push"));
         // Título de la interfaz de registro
         JLabel label = new JLabel("Create Account");
         label.setFont(new Font("sansserif", 1, 30));
@@ -52,7 +53,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
         MyTextField txtMail = new MyTextField();
         txtMail.setPrefixIcon(new ImageIcon(getClass().getResource("/recurso/icon/mail.png")));
-        txtMail.setHint("phone");
+        txtMail.setHint("Phone");
         register.add(txtMail, "w 60%");
 
         MyPasswordField txtPass = new MyPasswordField();
@@ -60,24 +61,38 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         txtPass.setHint("Password");
         register.add(txtPass, "w 60%");
 
-        Button cmd = new Button();
+        MyTextField txtRol = new MyTextField();
+        txtRol.setHint("Select role 'Admin or User'");
+        txtRol.setPrefixIcon(new ImageIcon(getClass().getResource("/recurso/icon/pass.png")));
+
+        register.add(txtRol, "w 60%");
+       
+
+        EffectButton cmd = new EffectButton();
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(205, 250, 250));
         cmd.setText("SING UP");
         cmd.addActionListener(e -> {
             String username = txtUser.getText();
-            long telefono = Long.parseLong(txtMail.getText());
+            String telefono = txtMail.getText();
             String password = new String(txtPass.getPassword());
-            boolean result = userController.register(username, telefono, password);  // Llama al controlador para registrar
-            if (result) {
-                System.out.println("Registro exitoso");
-                //llama ventana de seguridad 
-                //ingresa administrador contraseña 
-                //registro exitoso
-                 userController.clearFields(this); 
+            if (username.isEmpty() || password.isEmpty() || telefono.isEmpty()) {
+                System.out.println("Los campos no pueden estar vacíos");
             } else {
-                System.out.println("Error al registrar usuario");
-                 userController.clearFields(this); 
+                long phone = Long.parseLong(telefono);
+                //vanetana para credenciales de admin usuario y contraseña 
+                //si verifica correctamente llamamos al controlador
+                boolean result = userController.register(username, phone, password);  // Llama al controlador para registrar
+                if (result) {
+                    System.out.println("Registro exitoso");
+                    //llama ventana de seguridad 
+                    //ingresa administrador contraseña 
+                    //registro exitoso
+                    userController.clearFields(this);
+                } else {
+                    System.out.println("Error al registrar usuario");
+                    userController.clearFields(this);
+                }
             }
         });
         register.add(cmd, "w 40%, h 40");
@@ -107,24 +122,35 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         cmdForget.setCursor(new Cursor(Cursor.HAND_CURSOR));
         login.add(cmdForget);
 
-        Button cmd = new Button();
+        EffectButton cmd = new EffectButton();
         cmd.setBackground(new Color(7, 164, 121));
         cmd.setForeground(new Color(205, 250, 250));
         cmd.setText("SING IN");
 
         cmd.addActionListener(e -> {
+            // Validar campos no estén vacíos
             String username = txtUser.getText();
             String password = new String(txtPass.getPassword());
-            boolean result = userController.login(username, password);  // Llama al controlador para hacer login
-            if (result) {
-                System.out.println("Login exitoso");
-                  userController.clearFields(this); 
-                  //cierra la ventana y abre el dashbord
+
+            if (username.isEmpty() || password.isEmpty()) {
+                System.out.println("Los campos no pueden estar vacíos");
             } else {
-                System.out.println("Error al iniciar sesión");
-                 userController.clearFields(this); 
+                // Procedemos con la llamada al controlador
+                boolean result = userController.login(username, password);  // Llama al controlador para hacer login
+                if (result) {
+                    System.out.println("Login exitoso");
+                    userController.clearFields(this);  // Limpia los campos
+                    // Cierra la ventana y abre el dashboard (esto se puede hacer aquí)
+                    this.setVisible(false);
+                    Dashboard das = new Dashboard();
+                    das.setVisible(true);
+                } else {
+                    System.out.println("Error al iniciar sesión");
+                    userController.clearFields(this);  // Limpia los campos
+                }
             }
         });
+
         login.add(cmd, "w 40%, h 40");
     }
 

@@ -26,7 +26,7 @@ import org.jdesktop.animation.timing.TimingTargetAdapter;
  * Utiliza la biblioteca de animación TimingFramework para controlar la
  * animación del efecto.
  */
-public class Button extends JButton {
+public class EffectButton extends JButton {
 
     public Color getEffectColor() {
         return effectColor;
@@ -48,7 +48,7 @@ public class Button extends JButton {
      * Constructor de la clase Button. Configura el botón y añade un listener
      * para manejar el efecto de onda al hacer clic.
      */
-    public Button() {
+    public EffectButton() {
         setContentAreaFilled(false);
         setBorder(new EmptyBorder(5, 0, 5, 0));
         setBackground(Color.WHITE);
