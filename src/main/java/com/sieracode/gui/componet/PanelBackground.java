@@ -11,6 +11,15 @@ import java.awt.geom.RoundRectangle2D;
 public class PanelBackground extends javax.swing.JPanel {
     
     private int round = 15;
+
+    public int getRound() {
+        return round;
+    }
+
+    public void setRound(int round) {
+        this.round = round;
+        repaint();
+    }
     
     public PanelBackground() {
         initComponents();
