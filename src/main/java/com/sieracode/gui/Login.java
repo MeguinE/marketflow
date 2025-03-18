@@ -41,6 +41,9 @@ public class Login extends javax.swing.JFrame {
         init();
         setLocationRelativeTo(null);
     }
+    public Login(boolean dato){
+        
+    }
 
     /**
      * Método init: Configura el diseño, el panel de portada y la animación.
@@ -49,7 +52,7 @@ public class Login extends javax.swing.JFrame {
         // Configura el layout con márgenes y relleno
         layout = new MigLayout("fill, insets 0");
         cover = new PanelCover();
-        loginAndR = new PanelLoginAndRegister();
+        loginAndR = new PanelLoginAndRegister(this);
         // Configura el objetivo de la animación
         TimingTarget target = new TimingTargetAdapter() {
             @Override
@@ -189,7 +192,9 @@ public class Login extends javax.swing.JFrame {
             new Login().setVisible(true);
         });
     }
-
+public void close(){
+    this.dispose();
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane background;
     // End of variables declaration//GEN-END:variables

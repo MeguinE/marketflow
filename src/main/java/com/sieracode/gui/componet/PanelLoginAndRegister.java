@@ -1,7 +1,7 @@
 package com.sieracode.gui.componet;
 
 import com.sieracode.controller.UserController;
-import com.sieracode.gui.Dashboard;
+import com.sieracode.gui.Login;
 import com.sieracode.util.EffectButton;
 import com.sieracode.util.MyPasswordField;
 import com.sieracode.util.MyTextField;
@@ -27,12 +27,16 @@ import net.miginfocom.swing.MigLayout;
 public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
 
     private final UserController userController;
+    private final Login parentLogin;
 
-    public PanelLoginAndRegister() {
+    public PanelLoginAndRegister(Login parentLogin) {
         initComponents();
+        this.parentLogin = parentLogin; // Guardamos la referencia
+        userController = new UserController();
+
         initRegister();
         initLogin();
-        userController = new UserController();
+
         login.setVisible(false);
         register.setVisible(true);
     }
@@ -66,7 +70,6 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         txtRol.setPrefixIcon(new ImageIcon(getClass().getResource("/recurso/icon/pass.png")));
 
         register.add(txtRol, "w 60%");
-       
 
         EffectButton cmd = new EffectButton();
         cmd.setBackground(new Color(7, 164, 121));
@@ -141,9 +144,11 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
                     System.out.println("Login exitoso");
                     userController.clearFields(this);  // Limpia los campos
                     // Cierra la ventana y abre el dashboard (esto se puede hacer aquí)
-                    this.setVisible(false);
-                    Dashboard das = new Dashboard();
-                    das.setVisible(true);
+
+                    // Llama el método close() para cerrar la ventana del login
+                    // Cierra la ventana principal
+                    parentLogin.close();  // Éste sí es el que está visible
+
                 } else {
                     System.out.println("Error al iniciar sesión");
                     userController.clearFields(this);  // Limpia los campos
