@@ -143,11 +143,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
                 if (result) {
                     System.out.println("Login exitoso");
                     userController.clearFields(this);  // Limpia los campos
-                    // Cierra la ventana y abre el dashboard (esto se puede hacer aquí)
-
-                    // Llama el método close() para cerrar la ventana del login
-                    // Cierra la ventana principal
-                    parentLogin.close();  // Éste sí es el que está visible
+                    parentLogin.close();
 
                 } else {
                     System.out.println("Error al iniciar sesión");

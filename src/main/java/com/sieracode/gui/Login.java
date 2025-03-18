@@ -41,10 +41,6 @@ public class Login extends javax.swing.JFrame {
         init();
         setLocationRelativeTo(null);
     }
-    public Login(boolean dato){
-        
-    }
-
     /**
      * Método init: Configura el diseño, el panel de portada y la animación.
      */

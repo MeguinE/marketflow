@@ -16,6 +16,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         panelBackground1 = new com.sieracode.gui.componet.PanelBackground();
         panelMenu1 = new com.sieracode.gui.componet.PanelMenu();
+        Menu = new com.sieracode.gui.componet.PanelMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -24,11 +25,17 @@ public class Dashboard extends javax.swing.JFrame {
         panelMenu1.setLayout(panelMenu1Layout);
         panelMenu1Layout.setHorizontalGroup(
             panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 221, Short.MAX_VALUE)
+            .addGroup(panelMenu1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelMenu1Layout.setVerticalGroup(
             panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(panelMenu1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                .addGap(52, 52, 52))
         );
 
         javax.swing.GroupLayout panelBackground1Layout = new javax.swing.GroupLayout(panelBackground1);
@@ -92,6 +99,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.sieracode.gui.componet.PanelMenu Menu;
     private com.sieracode.gui.componet.PanelBackground panelBackground1;
     private com.sieracode.gui.componet.PanelMenu panelMenu1;
     // End of variables declaration//GEN-END:variables

@@ -16,13 +16,50 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="203" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="cmdClose" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cmdMi" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="cmdRe" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="44" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="cmdClose" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmdMi" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmdRe" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdClose">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="20" green="20" red="ef" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdMi">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="34" green="c1" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdRe">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="19" green="e6" red="5d" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>
