@@ -1,6 +1,7 @@
 package com.sieracode.gui.componet;
 
 import com.sieracode.controller.UserController;
+import com.sieracode.gui.Dashboard;
 import com.sieracode.gui.Login;
 import com.sieracode.util.EffectButton;
 import com.sieracode.util.MyPasswordField;
@@ -144,6 +145,8 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
                     System.out.println("Login exitoso");
                     userController.clearFields(this);  // Limpia los campos
                     parentLogin.close();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.setVisible(true);
 
                 } else {
                     System.out.println("Error al iniciar sesión");

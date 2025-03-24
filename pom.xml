@@ -41,6 +41,11 @@
             <version>3.11.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE125</version>
+        </dependency>
     </dependencies>
 
 </project>
