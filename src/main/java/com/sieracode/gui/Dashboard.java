@@ -1,17 +1,27 @@
 package com.sieracode.gui;
 
+import com.sieracode.gui.componet.Form1;
 import java.awt.Color;
+import java.awt.Component;
 
 public class Dashboard extends javax.swing.JFrame {
-    
+
     public Dashboard() {
         initComponents();
-        setBackground(new Color(0, 0, 0, 0)); 
+        setBackground(new Color(0, 0, 0, 0));
         Menu.initWinButton(this, panelBackground1);
         Scroll.getViewport().setOpaque(false);
         Scroll.setViewportBorder(null);
+        ShowFrom(new Form1());
     }
-    
+
+    private void ShowFrom(Component com) {
+       Body.removeAll();
+       Body.add(com);
+       Body.revalidate();
+       Body.repaint();
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -26,21 +36,9 @@ public class Dashboard extends javax.swing.JFrame {
         setUndecorated(true);
 
         Scroll.setBorder(null);
-        Scroll.setOpaque(false);
 
         Body.setOpaque(false);
-
-        javax.swing.GroupLayout BodyLayout = new javax.swing.GroupLayout(Body);
-        Body.setLayout(BodyLayout);
-        BodyLayout.setHorizontalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1008, Short.MAX_VALUE)
-        );
-        BodyLayout.setVerticalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-        );
-
+        Body.setLayout(new java.awt.BorderLayout());
         Scroll.setViewportView(Body);
 
         javax.swing.GroupLayout panelMenu1Layout = new javax.swing.GroupLayout(panelMenu1);
@@ -48,15 +46,16 @@ public class Dashboard extends javax.swing.JFrame {
         panelMenu1Layout.setHorizontalGroup(
             panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenu1Layout.createSequentialGroup()
-                .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                .addGap(54, 54, 54)
-                .addComponent(Scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1095, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelMenu1Layout.setVerticalGroup(
             panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
             .addGroup(panelMenu1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(57, 57, 57)
                 .addComponent(Scroll)
                 .addContainerGap())
         );
@@ -66,8 +65,8 @@ public class Dashboard extends javax.swing.JFrame {
         panelBackground1Layout.setHorizontalGroup(
             panelBackground1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBackground1Layout.createSequentialGroup()
-                .addComponent(panelMenu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         panelBackground1Layout.setVerticalGroup(
             panelBackground1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
