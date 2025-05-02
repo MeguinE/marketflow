@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="DatabaseConfigTest" time="0.018" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="DatabaseConfigTest" time="0.019" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
@@ -14,7 +14,6 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="DatabaseConfigTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="D:\Proyectos\MarketFlow"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
@@ -29,7 +28,7 @@
     <property name="maven.ext.class.path" value="D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\apps\java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\apps\NodeJs\;D:\apps\java\bin;D:\Instaladores\apache-maven-3.9.9\bin;D:\apps\xampp\php;D:\apps\composer;D:\apps\java\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\206w0\AppData\Local\Microsoft\WindowsApps;D:\apps\Microsoft VS Code\bin;C:\flutter\bin;C:\Users\206w0\AppData\Roaming\npm;D:\Instaladores\apache-maven-3.9.9\bin;D:\Instaladores\apache-maven-3.9.9\bin;;D:\apps\Intellij\IntelliJ IDEA 2024.3\bin;;C:\Users\206w0\AppData\Roaming\Composer\vendor\bin;C:\Program Files (x86)\Nmap;."/>
+    <property name="java.library.path" value="D:\apps\java\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\apps\NodeJs\;D:\apps\java\bin;D:\Instaladores\apache-maven-3.9.9\bin;D:\apps\xampp\php;D:\apps\composer;D:\apps\nvim\bin;D:\apps\neovim\bin;D:\apps\java\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\206w0\AppData\Local\Microsoft\WindowsApps;D:\apps\Microsoft VS Code\bin;C:\flutter\bin;C:\Users\206w0\AppData\Roaming\npm;D:\Instaladores\apache-maven-3.9.9\bin;D:\Instaladores\apache-maven-3.9.9\bin;D:\apps\Intellij\IntelliJ IDEA 2024.3\bin;;C:\Users\206w0\AppData\Roaming\Composer\vendor\bin;C:\Program Files (x86)\Nmap;;."/>
     <property name="maven.conf" value="D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven\bin\../conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="61.0"/>
@@ -45,7 +44,7 @@
     <property name="java.class.path" value="D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=DatabaseConfigTest -Dmaven.ext.class.path=D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=D:\apps\NeatBeans\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
     <property name="java.home" value="D:\apps\java"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -61,5 +60,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="DatabaseConfigTest" name="DatabaseConfigTest.testLoadConfig" time="0.018"/>
+  <testcase classname="DatabaseConfigTest" name="DatabaseConfigTest.testLoadConfig" time="0.019"/>
 </testsuite>

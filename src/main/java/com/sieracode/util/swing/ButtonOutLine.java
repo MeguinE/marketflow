@@ -1,4 +1,4 @@
-package com.sieracode.util;
+package com.sieracode.util.swing;
 
 import java.awt.Color;
 import java.awt.Cursor;

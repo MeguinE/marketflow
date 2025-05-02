@@ -1,6 +1,7 @@
 package com.sieracode.gui;
 
 import com.sieracode.gui.componet.Form1;
+import com.sieracode.util.swing.ScrollBarCustom;
 import java.awt.Color;
 import java.awt.Component;
 
@@ -10,6 +11,7 @@ public class Dashboard extends javax.swing.JFrame {
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         Menu.initWinButton(this, panelBackground1);
+        Scroll.setVerticalScrollBar(new ScrollBarCustom());
         Scroll.getViewport().setOpaque(false);
         Scroll.setViewportBorder(null);
         ShowFrom(new Form1());

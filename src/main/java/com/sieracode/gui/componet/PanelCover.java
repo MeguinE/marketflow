@@ -1,6 +1,6 @@
 package com.sieracode.gui.componet;
 
-import com.sieracode.util.ButtonOutLine;
+import com.sieracode.util.swing.ButtonOutLine;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GradientPaint;

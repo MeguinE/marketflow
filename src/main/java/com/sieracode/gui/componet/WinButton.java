@@ -42,9 +42,9 @@ public class WinButton extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cmdClose = new com.raven.swing.win_button.ShapeButton();
-        cmdMi = new com.raven.swing.win_button.ShapeButton();
-        cmdRe = new com.raven.swing.win_button.ShapeButton();
+        cmdClose = new com.sieracode.util.swing.ShapeButton();
+        cmdMi = new com.sieracode.util.swing.ShapeButton();
+        cmdRe = new com.sieracode.util.swing.ShapeButton();
 
         cmdClose.setBackground(new java.awt.Color(239, 32, 32));
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
@@ -83,8 +83,8 @@ public class WinButton extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.raven.swing.win_button.ShapeButton cmdClose;
-    private com.raven.swing.win_button.ShapeButton cmdMi;
-    private com.raven.swing.win_button.ShapeButton cmdRe;
+    private com.sieracode.util.swing.ShapeButton cmdClose;
+    private com.sieracode.util.swing.ShapeButton cmdMi;
+    private com.sieracode.util.swing.ShapeButton cmdRe;
     // End of variables declaration//GEN-END:variables
 }

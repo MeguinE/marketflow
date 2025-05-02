@@ -3,7 +3,7 @@ package com.sieracode.gui.componet;
 import com.sieracode.controller.UserController;
 import com.sieracode.gui.Dashboard;
 import com.sieracode.gui.Login;
-import com.sieracode.util.EffectButton;
+import com.sieracode.util.swing.EffectButton;
 import com.sieracode.util.MyPasswordField;
 import com.sieracode.util.MyTextField;
 import java.awt.Color;
