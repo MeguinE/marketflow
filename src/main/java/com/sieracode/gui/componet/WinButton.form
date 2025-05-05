@@ -17,45 +17,43 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Component id="cmdClose" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Component id="cmdClose" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="cmdMi" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="cmdRe" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cmdClose" min="-2" max="-2" attributes="0"/>
-          <Component id="cmdMi" min="-2" max="-2" attributes="0"/>
-          <Component id="cmdRe" min="-2" max="-2" attributes="0"/>
+          <Group type="103" groupAlignment="3" attributes="0">
+              <Component id="cmdClose" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Component id="cmdMi" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Component id="cmdRe" alignment="3" min="-2" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdClose">
+    <Component class="com.sieracode.gui.componet.Button" name="cmdClose">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="20" green="20" red="ef" type="rgb"/>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCloseActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdMi">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="34" green="c1" red="ff" type="rgb"/>
+          <Color blue="22" green="20" red="ff" type="rgb"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="com.raven.swing.win_button.ShapeButton" name="cmdRe">
+    <Component class="com.sieracode.gui.componet.Button" name="cmdMi">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="19" green="e6" red="5d" type="rgb"/>
+          <Color blue="0" green="ff" red="f0" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="com.sieracode.gui.componet.Button" name="cmdRe">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="f0" red="b" type="rgb"/>
         </Property>
       </Properties>
     </Component>

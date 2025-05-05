@@ -1,4 +1,3 @@
-
 package com.sieracode.gui.componet;
 
 
@@ -32,7 +31,7 @@ public class ButtonMenu extends JButton {
 
     public void setIconName(String iconName) {
         this.iconName = iconName;
-        setIcon(new ImageIcon(getClass().getResource("/com/raven/icon/" + iconName + ".png")));
+        setIcon(new ImageIcon(getClass().getResource("/recurso/icon/" + iconName + ".png")));
     }
 
     public Color getEffectColor() {
@@ -126,11 +125,11 @@ public class ButtonMenu extends JButton {
     public void setSelected(boolean bln) {
         super.setSelected(bln);
         if (bln) {
-            setIcon(new ImageIcon(getClass().getResource("/com/raven/icon/" + iconName + "s.png")));
+            setIcon(new ImageIcon(getClass().getResource("/recurso/icon/" + iconName + "s.png")));
             setForeground(new Color(242, 242, 242));
             setEffectColor(new Color(255, 255, 255));
         } else {
-            setIcon(new ImageIcon(getClass().getResource("/com/raven/icon/" + iconName + ".png")));
+            setIcon(new ImageIcon(getClass().getResource("/recurso/icon/" + iconName + ".png")));
             setForeground(new Color(76, 76, 76));
             setEffectColor(new Color(173, 173, 173));
         }

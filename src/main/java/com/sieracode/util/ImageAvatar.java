@@ -1,4 +1,4 @@
-package com.raven.swing;
+package com.sieracode.util;
 
 import java.awt.AlphaComposite;
 import java.awt.Composite;

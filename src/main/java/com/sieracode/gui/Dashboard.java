@@ -1,5 +1,6 @@
 package com.sieracode.gui;
 
+import com.sieracode.event.EventMenu;
 import com.sieracode.gui.componet.Form1;
 import com.sieracode.util.swing.ScrollBarCustom;
 import java.awt.Color;
@@ -10,7 +11,13 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
+        EventMenu eventmenu = new EventMenu(){
+            @Override
+            public  void selected(int index){
+                System.out.println(index);}
+        };
         Menu.initWinButton(this, panelBackground1);
+        Menu.initMenu(eventmenu);
         Scroll.setVerticalScrollBar(new ScrollBarCustom());
         Scroll.getViewport().setOpaque(false);
         Scroll.setViewportBorder(null);
@@ -48,9 +55,9 @@ public class Dashboard extends javax.swing.JFrame {
         panelMenu1Layout.setHorizontalGroup(
             panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenu1Layout.createSequentialGroup()
-                .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1095, Short.MAX_VALUE)
+                .addComponent(Scroll, javax.swing.GroupLayout.DEFAULT_SIZE, 1060, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panelMenu1Layout.setVerticalGroup(
