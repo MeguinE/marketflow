@@ -72,7 +72,9 @@ mvn exec:java
 
 3. **Interfaz**: 
    - El sistema utiliza una interfaz moderna y animada para la transición entre el registro y el login, mejorando la experiencia de usuario.
-   - 
+     ![Captura de pantalla 2025-05-05 180608](https://github.com/user-attachments/assets/9feb604a-c4d7-4307-9e03-643e148b11af)
+     ![Captura de pantalla 2025-05-05 180619](https://github.com/user-attachments/assets/73619f6a-1c68-44ec-83b6-950e75b565b5)
+
 
 ## Pruebas
 
