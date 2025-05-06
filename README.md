@@ -1,29 +1,34 @@
-# MarketFlow 
-**MarketFlow** es una aplicación de punto de venta diseñada para facilitar la gestión de ventas, inventarios y usuarios en negocios de retail. Este proyecto utiliza una arquitectura de tipo **Modelo-Vista-Controlador (MVC)**, separando la lógica de negocio, la interfaz de usuario y el manejo de datos.
+# MarketFlow
+
+**MarketFlow** es una aplicación de punto de venta diseñada para facilitar la gestión de ventas, inventarios y usuarios en negocios de retail. Este proyecto sigue el patrón de arquitectura **Modelo-Vista-Controlador (MVC)**, separando la lógica de negocio, la interfaz de usuario y el manejo de datos para mejorar la escalabilidad y el mantenimiento.
 
 ## Descripción
 
-MarketFlow es un sistema de punto de venta que incluye funcionalidades como:
+**MarketFlow** es un sistema de punto de venta que incluye las siguientes funcionalidades:
 
 - **Gestión de usuarios**: Permite registrar y autenticar usuarios con contraseñas seguras.
-- **Panel de login/registro**: Ofrece un panel de login y un formulario de registro.
-- **Interfaz de usuario interactiva**: Utiliza un diseño limpio y moderno con animaciones suaves durante la transición entre el registro y el inicio de sesión.
+- **Panel de login/registro**: Ofrece un panel de login y un formulario de registro de usuarios.
+- **Interfaz de usuario interactiva**: Utiliza un diseño limpio y moderno con animaciones suaves durante las transiciones entre el registro y el inicio de sesión.
 
-Este proyecto está diseñado usando el patrón **MVC**, lo que significa que la **lógica de negocio** está separada de la **interfaz de usuario**. Esto facilita la escalabilidad y el mantenimiento del sistema.
+Este proyecto está diseñado usando el patrón **MVC**, lo que significa que la **lógica de negocio** está separada de la **interfaz de usuario**, facilitando la escalabilidad y el mantenimiento del sistema.
 
 ## Requisitos
 
+Antes de comenzar, asegúrate de contar con las siguientes herramientas y configuraciones:
+
 - **Java 17**.
-- **Maven** para la gestión de dependencias (si es necesario).
+- **Maven** para la gestión de dependencias.
 - **MySQL** como sistema de gestión de base de datos.
 
 ## Instalación
 
-### 1. Clona este repositorio:
+### 1. Clona este repositorio
+
+Para clonar el repositorio, ejecuta el siguiente comando en tu terminal:
 
 ```bash
 git clone https://github.com/tuusuario/MarketFlow.git
-```
+
 
 ### 2. Compila el proyecto:
 
