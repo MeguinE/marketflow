@@ -28,7 +28,7 @@ Para clonar el repositorio, ejecuta el siguiente comando en tu terminal:
 
 ```bash
 git clone https://github.com/tuusuario/MarketFlow.git
-
+```
 
 ### 2. Compila el proyecto:
 
@@ -104,6 +104,3 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos:
 ## Licencia
 
 Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
-```
-
-Este es un archivo `README.md` completamente estructurado y listo para usar. Simplemente cópialo y pégalo en la raíz de tu proyecto y tendrás toda la documentación necesaria para tu repositorio de GitHub. ¡Listo para subir!
