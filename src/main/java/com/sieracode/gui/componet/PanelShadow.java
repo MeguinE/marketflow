@@ -64,28 +64,40 @@ public class PanelShadow extends JPanel {
         int y = 0;
         int width = getWidth() - size;
         int height = getHeight() - size;
-        if (shadowType == ShadowType.TOP) {
-            x = shadowSize;
-            y = size;
-        } else if (shadowType == ShadowType.BOT) {
-            x = shadowSize;
-            y = 0;
-        } else if (shadowType == ShadowType.TOP_LEFT) {
-            x = size;
-            y = size;
-        } else if (shadowType == ShadowType.TOP_RIGHT) {
-            x = 0;
-            y = size;
-        } else if (shadowType == ShadowType.BOT_LEFT) {
-            x = size;
-            y = 0;
-        } else if (shadowType == ShadowType.BOT_RIGHT) {
-            x = 0;
-            y = 0;
-        } else {
+        if (null == shadowType) {
             //  Center
             x = shadowSize;
             y = shadowSize;
+        } else switch (shadowType) {
+            case TOP -> {
+                x = shadowSize;
+                y = size;
+            }
+            case BOT -> {
+                x = shadowSize;
+                y = 0;
+            }
+            case TOP_LEFT -> {
+                x = size;
+                y = size;
+            }
+            case TOP_RIGHT -> {
+                x = 0;
+                y = size;
+            }
+            case BOT_LEFT -> {
+                x = size;
+                y = 0;
+            }
+            case BOT_RIGHT -> {
+                x = 0;
+                y = 0;
+            }
+            default -> {
+                //  Center
+                x = shadowSize;
+                y = shadowSize;
+            }
         }
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = img.createGraphics();

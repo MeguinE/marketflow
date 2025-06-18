@@ -20,6 +20,7 @@ com\sieracode\util\MyTextField.class
 com\sieracode\util\PasswordHasher.class
 com\sieracode\gui\componet\PanelShadow.class
 com\sieracode\gui\componet\WinButton.class
+com\sieracode\gui\componet\PanelShadow$1.class
 com\sieracode\model\User.class
 com\sieracode\gui\componet\ShadowType.class
 com\sieracode\util\swing\ShapeButton.class
@@ -37,6 +38,7 @@ com\sieracode\gui\Login$1.class
 com\sieracode\util\swing\ScrollBarCustom.class
 com\sieracode\gui\componet\ButtonMenu$1.class
 com\sieracode\gui\Dashboard.class
+com\sieracode\util\swing\ButtonOutLine$1.class
 com\sieracode\gui\Login.class
 com\sieracode\util\swing\ShadowRenderer.class
 com\sieracode\dao\DatabaseConnection.class

@@ -3,10 +3,6 @@ package com.sieracode.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class DatabaseConnection {
 
@@ -53,13 +49,4 @@ public class DatabaseConnection {
             }
         }
     }
-    // Método para crear la base de datos si no existe
-
-   
-
-    // Método para crear las tablas y el usuario si no existen
-    
-
-    // Método para ejecutar un script SQL desde un archivo
-   
 }

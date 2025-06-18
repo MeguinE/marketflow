@@ -42,7 +42,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
         register.setVisible(true);
     }
 
-    private void initRegister() {
+     private void initRegister() {
         register.setLayout(new MigLayout("wrap", "push[center]push", "push[]25[]10[]10[]10[]10[]push"));
         // Título de la interfaz de registro
         JLabel label = new JLabel("Create Account");

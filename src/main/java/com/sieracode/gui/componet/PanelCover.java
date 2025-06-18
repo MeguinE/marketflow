@@ -25,6 +25,13 @@ import net.miginfocom.swing.MigLayout;
  */
 public class PanelCover extends javax.swing.JPanel {
 
+    // Paleta de colores
+    private final Color DARK_GREEN = new Color(0x1b, 0x2e, 0x28);     // #1b2e28
+    private final Color DARK_TEAL = new Color(0x1c, 0x4a, 0x47);      // #1c4a47
+    private final Color PRIMARY_GREEN = new Color(0x00, 0x72, 0x61);  // #007261
+    private final Color LIGHT_BLUE = new Color(0xb2, 0xd2, 0xdb);     // #b2d2db
+    private final Color SOFT_WHITE = new Color(0xfa, 0xfa, 0xfa);    // #fafafa
+
     private final DecimalFormat df = new DecimalFormat("##0.###");
     private ActionListener event;
     private MigLayout layout;
@@ -32,7 +39,7 @@ public class PanelCover extends javax.swing.JPanel {
     private JLabel description;
     private JLabel description1;
     private ButtonOutLine button;
-    private Boolean isLogin= false;
+    private Boolean isLogin = false;
 
     public PanelCover() {
         initComponents();
@@ -43,30 +50,38 @@ public class PanelCover extends javax.swing.JPanel {
     }
 
     private void init() {
+        // Título principal
         title = new JLabel("welcome Back!");
         title.setFont(new Font("sansserif", 1, 30));
         title.setForeground(new Color(245, 245, 245));
         add(title);
 
+        // Descripción
         description = new JLabel("To keep connected with us please");
         description.setForeground(new Color(245, 245, 245));
         add(description);
 
+        // Descripción adicional
         description1 = new JLabel("login whit your personal info");
         description1.setForeground(new Color(245, 245, 245));
         add(description1);
 
+        // Botón de acción
         button = new ButtonOutLine();
-        button.setBackground(new Color(255, 255, 255));
-        button.setForeground(new Color(255, 255, 255));
-        button.setText("SING IN");
+        button.setBackground(new Color(0, 0, 0, 0)); // Fondo transparente
+        button.setForeground(SOFT_WHITE); // Texto blanco suave
+        button.setBorderColor(SOFT_WHITE); // Borde blanco suave
+        button.setText("SIGN IN");
+        button.setFont(new Font("SansSerif", Font.BOLD, 14));
+        button.setHoverBackgroundColor(SOFT_WHITE); // Fondo blanco al pasar el mouse
+        button.setHoverForegroundColor(PRIMARY_GREEN); // Texto verde al pasar el mouse
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 event.actionPerformed(e);
             }
         });
-        add(button, "w 60%, h 40");
+        add(button, "w 60%, h 46");
     }
 
     @SuppressWarnings("unchecked")
@@ -86,21 +101,36 @@ public class PanelCover extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Método sobrescrito para personalizar la apariencia del panel. Dibuja un
-     * fondo degradado antes de pintar los componentes.
+     * Dibuja un fondo con gradiente suave usando la paleta de colores
      */
     @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
-        GradientPaint gra = new GradientPaint(0, 0, new Color(40, 171, 102), 0, getHeight(), new Color(22, 116, 66));
+
+        // Gradiente diagonal suave
+        GradientPaint gra = new GradientPaint(
+                0, 0, DARK_GREEN,
+                getWidth(), getHeight(), DARK_TEAL
+        );
+
         g2.setPaint(gra);
         g2.fillRect(0, 0, getWidth(), getHeight());
-        super.paintComponent(grphcs); //To change body of generated methods, choose Tools | Templates.
+
+        // Elemento decorativo en la esquina inferior derecha
+        int circleSize = Math.min(getWidth(), getHeight()) * 3 / 4;
+        g2.setColor(new Color(0x00, 0x72, 0x61, 30)); // Verde semitransparente
+        g2.fillOval(
+                getWidth() - circleSize / 2,
+                getHeight() - circleSize / 2,
+                circleSize,
+                circleSize
+        );
+
+        super.paintComponent(grphcs);
     }
 
     /**
-     * Método para registrar un ActionListener. Este listener se ejecutará
-     * cuando se haga clic en el botón.
+     * Registra un ActionListener para el botón
      */
     public void addEvent(ActionListener event) {
         this.event = event;
@@ -138,21 +168,24 @@ public class PanelCover extends javax.swing.JPanel {
         layout.setComponentConstraints(description1, "pad 0 " + v + "% 0 " + v + "%");
     }
 
+    /**
+     * Cambia el texto según el modo (login/register)
+     */
     private void login(boolean login) {
         if (this.isLogin != login) {
-            
+
             if (login) {
                 title.setText("Hello Friend!");
                 description.setText("Enter your personal details");
                 description1.setText("and start journey wiht us please");
                 button.setText("SING UP");
-                
+
             } else {
                 title.setText("welcome Back!");
                 description.setText("To keep connected with us please");
                 description1.setText("login whit your personal info");
                 button.setText("SING IN");
-                
+
             }
             this.isLogin = login;
         }
